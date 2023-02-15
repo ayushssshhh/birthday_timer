@@ -1,0 +1,149 @@
+/* font */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Sassy+Frass&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b1522;
+}
+
+/* main heart */
+.heart {
+    height: 90px;
+    width: 90px;
+    background-color: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart 0.6s linear infinite;
+}
+
+@keyframes heart {
+    0% {
+        transform: rotate(-45deg) scale(1.07);
+    }
+
+    80% {
+        transform: rotate(-45deg) scale(1.0);
+    }
+
+    100% {
+        transform: rotate(-45deg) scale(0.8);
+    }
+
+}
+
+.heart::before {
+    content: '';
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    background-color: #f20044;
+    top: -50%;
+    border-radius: 50px;
+    box-shadow: -10px 10px 90px #f20044;
+}
+
+.heart::after {
+    content: '';
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    background-color: #f20044;
+    right: -50%;
+    border-radius: 50px;
+    box-shadow: -10px 10px 90px #f20044;
+}
+
+/* taped countdown */
+.tap {
+    color: WHITE;
+    position: absolute;
+    font-family: cursive;
+    font-weight: 900;
+    padding : 90px;
+}
+
+.timer {
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    z-index: 2;
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+
+}
+
+#demo {
+    color: aliceblue;
+    position: absolute;
+    z-index: 5;
+    font-family: monospace;
+    background-color: #0b152250;
+    padding: 15px;
+    font-size: 32px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.countdown {
+    position: absolute;
+    color: white;
+    z-index: 5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    
+}
+
+.none{
+    display: none;
+}
+
+/* heartFall */
+.drop{
+    position: fixed;
+    top:1vh;
+    font-size: 20px;
+    animation: fall 2s linear forwards;
+    transition: transform 3s;
+}
+
+@keyframes fall {
+    to{
+        transform: translateY(105vh);
+    }
+}
+
+.drop2{
+    position: fixed;
+    top:1vh;
+    font-size: 20px;
+    animation: fall 1.5s linear forwards;
+    transition: transform 3s;
+}
+
+/* HEADING */
+H1{
+    font-size: 90px;
+    position: absolute;
+    top: 7%;
+    font-family: 'Sassy Frass', cursive;    
+    font-weight:bolder;
+    color: white;
+    font-family:fantasy;
+}
+
